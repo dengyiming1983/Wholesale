@@ -1,0 +1,29 @@
+WholesaleMonitor build 0006
+1. 读取数据库quote lst中的upld_time作为最后上存更新时间
+2. 上存最后更新时间写入INI file当中保存
+3. 读取信息方法进行优化
+
+WholesaleMonitor build 0005
+1. 修复一些界面问题显示
+
+WholesaleMonitor build 0004
+1. 移除Eable的功能，Service运行后直接启动。
+2. 增加Dsiplay功能，直接打开New Quotes提示列表内容
+3. About调整为不在跳转页面，而是弹出软件信息对话框
+4. Databae设置固定不变。除了DSN外。
+5. Quit修改为Exit
+6. 移除setting的功能
+7. 增加INI file配置文件。保存DSN,Interval,Log相关信息
+
+WholesaleMonitor build 0003
+1. 修复已知bug。
+2. 增加一个通知声音开关按钮。
+3. 界面背景颜色调整。
+
+WholesaleMonitor build 0002
+1. 显示通知界面调整。信息保存到列表当中。
+2. 增加关闭窗体功能。
+3. 增加清除所有信息功能。
+
+WholesaleMonitor build 0001
+1. 实现对quote进行监测，当有新quote加入时，右下角会弹出提示。

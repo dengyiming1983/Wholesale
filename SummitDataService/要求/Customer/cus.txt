@@ -1,0 +1,22 @@
+Data Map for Customer file
+
+Account number
+Name
+Region
+Bill to Address 1     
+Line    2      
+Line    3
+Ship to Address 1     
+Line    2    
+Line    3
+Phone #
+Current Balance
+Term
+Class				
+Determins prices
+Sales man #
+Contact Person
+Email
+Chinese name
+Record Type--set to 0 for out going data
+

@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5A3B41A6-0F34-42E2-BCBB-307EB0900CF9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>gfcaDataService</RootNamespace>
+    <AssemblyName>gfcaDataService</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>MQ48.ICO</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox1.designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\DBModel.cs" />
+    <Compile Include="DataSynchronizer.cs" />
+    <Compile Include="DbHelperOdbc.cs" />
+    <Compile Include="DBValueConvert.cs" />
+    <Compile Include="EncryptUtils.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalConfiguration.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="MarketConnection.cs" />
+    <Compile Include="MoleQPos\CommMessage.cs" />
+    <Compile Include="MoleQPos\CommProtocol.cs" />
+    <Compile Include="MoleQPos\InMessage.cs" />
+    <Compile Include="MoleQPos\MessageContent.cs" />
+    <Compile Include="MoleQPos\MessageLog.cs" />
+    <Compile Include="MoleQPos\OutMessage.cs" />
+    <Compile Include="MoleQPos\prodtable.cs" />
+    <Compile Include="MoleQPos\PushProtocol.cs" />
+    <Compile Include="MoleQPos\t_batch_updt_detail.cs" />
+    <Compile Include="MoleQPos\t_batch_updt_lst.cs" />
+    <Compile Include="MoleQPos\t_discount_items.cs" />
+    <Compile Include="MoleQPos\t_extra_prodtable.cs" />
+    <Compile Include="MoleQPos\t_item_vdr_link.cs" />
+    <Compile Include="MoleQPos\t_measure_cnv.cs" />
+    <Compile Include="MoleQPos\t_measure_dsc.cs" />
+    <Compile Include="MoleQPos\t_mkt_dep.cs" />
+    <Compile Include="MoleQPos\t_vendor.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UniversalSQLStatementGenerator.cs" />
+    <Compile Include="View\frmConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmConfig.designer.cs">
+      <DependentUpon>frmConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmRequestPwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmRequestPwd.designer.cs">
+      <DependentUpon>frmRequestPwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MenuView.cs" />
+    <Compile Include="WholesaleConnection.cs" />
+    <EmbeddedResource Include="AboutBox1.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="View\frmConfig.resx">
+      <DependentUpon>frmConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmRequestPwd.resx">
+      <DependentUpon>frmRequestPwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moleq_logo_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moleq_logo_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_setting_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_quit_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="info.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MQ48.ICO" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,52 @@
+SummitDataService build 0009
+1. 支持导入order file信息
+2. 支持导入statement信息
+
+SummitDataService build 0008
+1. 调整Customer导入导出field。增加current balance, 30 days balance, 60 days balance, 90 days balance
+2. 调整Order导出中ref#, 和Invoice#对应数据输出结果
+
+SummitDataService build 0007
+1. 调整summit item输出文件中的measure field格式一致。
+2. 调整summit item输出文件中的gross weight field结果是net wt加extra wt的总和。
+3. 修改导入Item文件ChineseDescription使用编码GB2312进行解析。
+4. 修复导出文件信息中的Measure为小写。
+
+SummitDataService build 0006
+1. 修复已知bug
+2. quote导出文件从两个合并成一个，并不输出Header
+3. Exit的时候需要提供密码验证。
+4. L类型记录后追加一个字段。值全为2
+5. 调整OrderDate，DelvDate输出日期格式，格式为(yyyy-MM-dd)
+6. 调整在Service正在progress时，disable exit键
+
+SummitDataService build 0005
+1. 实现export quote数据为txt文件
+2. 实现Setting信息保存到本地
+
+SummitDataService build 0004
+1. 弹出通知背景颜色柔和，字体小些
+2. 通知显示内容, Importing cust_xxxxx.txt   Read: 23 Write: 20
+3. 增加一个Progress... 的menu，用于显示通知
+4. Exit退出的时候弹出warring, 询问用户是否退出
+5. bill to地址中有same , 表示和ship to一样
+6. 处理文件改了tmp之后，退出等其他情况下将其名字还原原来的文件名字
+7. empl_lbl = empl_no, empl_status =Y
+8. customer real type -> 全部都是wholdsale ( clt_type = 'W' )
+9. output item file name format -> item_(date).txt
+10. 增加option名为insert customer, 是否插入customer数据操作
+11. update customer的时候只update credit limit
+12. 实现export customer数据为txt文件
+
+SummitDataService build 0003
+1. 读取customer数据文件导入数据到summit数据库中
+
+SummitDataService build 0002
+1. WholesaleImportService改名为SummitDataService
+2. 插item时，pkg_3_dim,pkg_ct,base_ct设置为1
+3. t_item_lot中的lot_hold插入时为 N
+
+WholesaleImportService build 0001
+1. 读取txt文件导入数据到summit数据库中
+2. 可以导出summit item数据信息
+3. Setting中增加一个Inert Items设置。该设置为是否做插入数据操作。

@@ -1,0 +1,10 @@
+/* 清空相关表数据 */
+truncate table dba.t_extra_prodtable
+
+truncate table dba.prodtable
+
+truncate table dba.t_brand_lst
+
+truncate table dba.t_item_memo
+
+truncate table dba.t_summit_measure

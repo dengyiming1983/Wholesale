@@ -1,0 +1,21 @@
+Data Mappings
+
+ 1 - Item #
+ 2 - Description
+ 3 - Brand
+ 4 - Pack
+ 5 - Qty on hand
+ 6 - Gross weight
+ 7 - Price A
+ 8 - Price B
+ 9 - Price C
+10 - FOB
+11 - Cost
+12 - Vendor #
+13 - Memo
+14 - Chinese Description
+15 - UPC code
+16 - Related Item Code
+17 - Record type
+
+ 

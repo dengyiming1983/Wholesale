@@ -1,0 +1,3 @@
+gfcaDataService_build_0001 
+1. 实现wholesale item插入数据传送到market item的表中。
+2. 修改market中prodtable插入数据是一些值初始化问题
